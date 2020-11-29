@@ -4,9 +4,6 @@ plugins {
 }
 apply plugin: 'kotlin-kapt'
 
-buildFeatures{
-    dataBinding=true
-}
 
 android {
     compileSdkVersion 30
@@ -34,6 +31,10 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures{
+        dataBinding=true
+    }
+
 }
 
 dependencies {
@@ -55,6 +56,8 @@ dependencies {
     implementation 'com.xwray:groupie:2.3.0'
     implementation 'com.xwray:groupie-databinding:2.3.0'
     //==========================lifecycle==========================
-    implementation("androidx.lifecycle:lifecycle-extension:2.2.0")
-
+    //implementation("androidx.lifecycle:lifecycle-extension:2.2.0")
+    //==========================Picasso============================
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'jp.wasabeef:picasso-transformations:2.2.1'
 }

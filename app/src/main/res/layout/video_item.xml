@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <!--ビデオタイトル-->
+        <variable
+            name="video_title"
+            type="String" />
+        <!-- ビデオサムネ -->
+        <variable
+            name="video_thumbnail"
+            type="String" />
+        <!-- ユーザーアイコン -->
+        <variable
+            name="video_user_icon"
+            type="String" />
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--　ビデオカードのアイテムXML -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="20dp">
+            <!-- サムネ画像 -->
+            <ImageView
+                android:src="@{video_thumbnail}"
+                android:id="@+id/video_item_thumbnail"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                >
+                <!--ユーザーアイコン-->
+                <ImageView
+                    android:src="@{video_user_icon}"
+                    android:id="@+id/video_item_user_icon"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"/>
+                <!--動画タイトル-->
+                <TextView
+                    android:text="@{video_title}"
+                    android:id="@+id/video_item_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+</layout>
+
+
+

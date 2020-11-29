@@ -16,5 +16,5 @@ class YoutubeHttpClient(api:OperationYoutubeApi){
         return httpClient.newCall(request)
     }
 
-    fun getLiveInfoAsync() : Response = httpCall.execute()
+    fun getLiveInfoAsync() : String = httpCall.execute().body!!.string()
 }
